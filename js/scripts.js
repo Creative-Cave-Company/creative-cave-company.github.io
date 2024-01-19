@@ -1,11 +1,11 @@
 // ================================
 // == VARIABLES
 // ================================
-var languageIds = ["en", "de"];
-var systemLangauge = navigator.language || navigator.userLanguage;
-var systemLangaugeId = systemLangauge.substring(0, systemLangauge.indexOf("-"));
-var defaultLangauge = languageIds.indexOf(systemLangaugeId) != -1 ? languageIds[languageIds.indexOf(systemLangaugeId)] : languageIds[0]; // Get system langauge or get default [0]
-var languageDict;
+const languageIds = ["en", "de"];
+const systemLangauge = navigator.language || navigator.userLanguage;
+const systemLangaugeId = systemLangauge.substring(0, systemLangauge.indexOf("-"));
+const defaultLangauge = languageIds.indexOf(systemLangaugeId) !== -1 ? languageIds[languageIds.indexOf(systemLangaugeId)] : languageIds[0]; // Get system langauge or get default [0]
+let languageDict;
 // Elements
 const scrollToTopButton = document.getElementById("scroll_to_top_button");
 
@@ -26,7 +26,7 @@ $(document).ready( function() {
 
   // Set current year
   $("#current_year").text(new Date().getFullYear());
-}(jQuery));
+});
 
 
 
